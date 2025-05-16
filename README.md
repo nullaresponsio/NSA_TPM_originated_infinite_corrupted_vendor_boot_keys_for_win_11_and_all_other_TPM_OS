@@ -1,3 +1,7 @@
+# Bo making new Microsoft acct to attest win 11 pro
+
+[text](../../Users/bshan/Downloads)
+
 # Leaking TPM (i guess) classified stolen cert algorithm
 
 RSA 2048
@@ -23,3 +27,5 @@ digraph G {
     TPM   -> Login  [label="Signs token", style=dashed, color=gray];
     Login -> Bo     [label="Authenticated",          color=darkgreen];
 }
+
+![alt text](Bo_attesting_after_login_from_microsoft_cloud_account.png)
