@@ -1,0 +1,2 @@
+# NSA_TPM_originated_infinite_corrupted_vendor_boot_keys_for_win_11_and_all_other_TPM_OS
+
