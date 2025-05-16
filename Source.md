@@ -1,0 +1,9 @@
+
+![alt text](NSA_TPM_generated_quote_unquote_stole_vendor_leaf_cert_of_win_11_microsoft_into_malicious_kernel_drivers_disabling_bos_powershell_commands_via_AMSI_hook.png)
+# NSA_TPM_originated_infinite_corrupted_vendor_boot_keys_for_win_11_and_all_other_TPM_OS
+
+![alt text](NSA_TPM_generated_quote_unquote_stole_vendor_leaf_cert_of_win_11_microsoft_into_malicious_kernel_drivers_disabling_bos_powershell_commands_via_AMSI_hook.png)
+
+# Wifi/bluetooth
+
+![alt text](Wifi_bluetooth_TPM_SoC_security_platform.png)

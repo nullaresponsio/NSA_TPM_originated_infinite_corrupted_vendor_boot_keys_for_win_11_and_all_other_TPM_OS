@@ -1,9 +1,25 @@
+# Leaking TPM (i guess) classified stolen cert algorithm
 
-![alt text](NSA_TPM_generated_quote_unquote_stole_vendor_leaf_cert_of_win_11_microsoft_into_malicious_kernel_drivers_disabling_bos_powershell_commands_via_AMSI_hook.png)
-# NSA_TPM_originated_infinite_corrupted_vendor_boot_keys_for_win_11_and_all_other_TPM_OS
+RSA 2048
 
-![alt text](NSA_TPM_generated_quote_unquote_stole_vendor_leaf_cert_of_win_11_microsoft_into_malicious_kernel_drivers_disabling_bos_powershell_commands_via_AMSI_hook.png)
+// Flow: NSA intercept → corrupted vendor leaf cert → global TPM login hijack
+digraph G {
+    rankdir=LR;
+    node [shape=box, style=filled, fillcolor="#FFFFCC"];
 
-# Wifi/bluetooth
+    Bo       [label="Bo Shang\nECC P-256 cert"];
+    Cloud    [label="Microsoft Cloud"];
+    NSA1     [label="NSA Intercept"];
+    NSAroot  [label="NSA Root Key\nRSA-2048"];
+    Vendor   [label="Vendor Firmware\nService"];
+    TPM      [label="TPM Chip\nCorrupted Leaf\nRSA-2048"];
+    Login    [label="Win11 Login\nToken Signed"];
 
-![alt text](Wifi_bluetooth_TPM_SoC_security_platform.png)
+    Bo    -> Cloud  [label="Sign-in",                color=darkgreen];
+    Cloud -> NSA1   [label="Fetch user cert",        color=red];
+    NSA1  -> NSAroot[label="Store/Decrypt",          color=red];
+    NSAroot -> Vendor [label="Issue corrupted\nvendor leaf cert", color=red];
+    Vendor -> TPM   [label="Firmware push",          color=red];
+    TPM   -> Login  [label="Signs token", style=dashed, color=gray];
+    Login -> Bo     [label="Authenticated",          color=darkgreen];
+}
