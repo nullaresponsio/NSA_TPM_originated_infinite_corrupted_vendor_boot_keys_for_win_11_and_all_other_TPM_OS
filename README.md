@@ -1,7 +1,17 @@
 # Bo making new Microsoft acct to attest win 11 pro
 
-[text](../../Users/bshan/Downloads)
+![alt text](Bos_Microsoft_Developer_to_Windows_Store_flow_acct.png)
 
+
+The graph shows Bo Shang’s full thought-process flow:
+
+Attest & save a pristine ECC P-256 cert from Microsoft Cloud.
+
+Launch Ghidra, load kernel drivers, and extract their embedded signatures.
+
+Feed both the trusted ECC cert and the corrupted TPM RSA-2048 cert into a comparison step.
+
+A decision node flags a mismatch (integrity compromised → reinstall) or confirms the drivers are clean.
 # Leaking TPM (i guess) classified stolen cert algorithm
 
 RSA 2048
